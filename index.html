@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frenzar FairChild (daFairChild)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color:#111;
+}
+
+/* Header */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(255,255,255,0.2);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.logo {
+  font-family:'Playfair Display', serif;
+  font-size:2rem;
+  font-weight:700;
+  color:#fff;
+  text-shadow:0 0 15px #fff;
+}
+nav a {
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+  color:#fff;
+  transition:0.3s;
+}
+nav a:hover { color:#000; text-shadow:0 0 15px #fff; }
+
+/* Hero */
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:4rem;
+  color:#fff;
+  text-shadow:0 0 30px #fff;
+  margin-bottom:20px;
+}
+.hero p {
+  font-size:1.2rem;
+  color:#fff;
+  margin-bottom:30px;
+}
+.cta a {
+  margin:10px;
+  padding:15px 30px;
+  background:#111;
+  color:#FFD700;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 0 20px #fff;
+  transition:0.3s;
+}
+.cta a:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 35px #fff;
+}
+
+/* Sections */
+section {
+  padding:80px 50px;
+  max-width:1200px;
+  margin:auto;
+}
+h2 {
+  font-size:2.5rem;
+  margin-bottom:40px;
+  text-align:center;
+  color:#fff;
+  text-shadow:0 0 15px #FFD700;
+}
+
+/* Music */
+.music-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.track {
+  background: rgba(255,255,255,0.2);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.track:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px #fff;
+}
+.track img { border-radius:15px; margin-bottom:15px; }
+.track h3 { margin-bottom:10px; color:#FFD700; font-weight:700; }
+
+/* Video */
+.video-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+.video-grid iframe { border-radius:12px; transition:transform 0.3s; }
+.video-grid iframe:hover { transform:scale(1.02); box-shadow:0 0 20px #fff; }
+
+/* Bio */
+.bio {
+  font-size:1.2rem;
+  line-height:1.7;
+  background: rgba(255,255,255,0.15);
+  padding:40px 30px;
+  border-radius:15px;
+  color:#fff;
+  box-shadow:0 0 20px #fff;
+}
+
+/* Forms */
+.form-section form {
+  max-width:600px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+.form-section input, .form-section textarea {
+  padding:15px;
+  border-radius:8px;
+  border:none;
+  font-size:1rem;
+}
+.form-section button {
+  padding:15px;
+  background:#111;
+  color:#FFD700;
+  font-weight:700;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.form-section button:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px #fff;
+}
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:40px;
+  color:#fff;
+}
+footer a {
+  margin:0 15px;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+}
+footer a:hover { color:#111; text-shadow:0 0 20px #fff; }
+
+/* Animations */
+@keyframes sparkle {
+  0% {opacity:0.2; transform:translateY(0);}
+  50% {opacity:1; transform:translateY(-10px);}
+  100% {opacity:0.2; transform:translateY(0);}
+}
+.sparkle {
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#fff;
+  border-radius:50%;
+  animation:sparkle 2s infinite;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Frenzar FairChild</div>
+  <nav>
+    <a href="#music">Music</a>
+    <a href="#videos">Videos</a>
+    <a href="#bio">Biography</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Frenzar FairChild</h1>
+  <p>(daFairChild) — The Official Artist Page</p>
+  <div class="cta">
+    <a href="#music">Listen Now</a>
+    <a href="#videos">Watch Videos</a>
+  </div>
+  <!-- Subtle sparkles -->
+  <div class="sparkle" style="top:20%; left:15%; animation-delay:0s;"></div>
+  <div class="sparkle" style="top:40%; left:60%; animation-delay:1s;"></div>
+  <div class="sparkle" style="top:70%; left:30%; animation-delay:2s;"></div>
+</section>
+
+<!-- Music Section -->
+<section id="music">
+  <h2>Upcoming Music</h2>
+  <div class="music-grid">
+    <div class="track">
+      <img src="coming-soon.jpg" alt="Track Banner">
+      <h3>Coming Soon</h3>
+      <p>Stay tuned for new releases!</p>
+    </div>
+    <div class="track">
+      <img src="coming-soon.jpg" alt="Track Banner">
+      <h3>Coming Soon</h3>
+      <p>Stay tuned for new releases!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Videos Section -->
+<section id="videos">
+  <h2>Videos</h2>
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1"></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"></iframe>
+  </div>
+</section>
+
+<!-- Biography -->
+<section id="bio">
+  <h2>Music Biography</h2>
+  <div class="bio">
+    Frenzar FairChild (daFairChild) is an emerging artist blending music, visuals, and culture into a unique sound. Known for infectious energy and creative vision, daFairChild is building a brand that resonates globally. His style mixes modern rap, melodic hooks, and authentic storytelling. Add your full story, influences, discography, awards, and milestones here.
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="form-section">
+  <h2>Bookings & Collaborations</h2>
+  <form>
+    <input type="text" placeholder="Name / Company" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Booking details" rows="5" required></textarea>
+    <button>Submit Booking Request</button>
+  </form>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="form-section">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Frenzar FairChild</p>
+  <a href="https://www.youtube.com/@dafairchild">YouTube</a>
+  <a href="https://www.tiktok.com/@dafairchild">TikTok</a>
+  <a href="https://www.instagram.com/dafairchild">Instagram</a>
+  <a href="https://www.snapchat.com/add/delicious409">Snapchat</a>
+</footer>
+
+</body>
+</html>
